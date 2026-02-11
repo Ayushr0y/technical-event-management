@@ -1,40 +1,25 @@
 # Technical Event Management System
 
-A beautiful, modern Flask-based event management system with role-based access control and stunning UI/UX design.
+A Flask-based Technical Event Management System with role-based access control.
 
-## ✨ Features
+## Features
 
-- **Beautiful Modern Design** - Gradient backgrounds, smooth animations, and responsive layouts
-- **Three User Roles** - Admin, Vendor, and User with unique color themes
-- **Session-Based Authentication** - Secure login with hidden passwords
-- **Maintenance Module** - Admin-only vendor and user management
-- **Transaction Module** - Vendors add items, Users request items
-- **Reports Module** - Comprehensive order tracking and status updates
-- **Fully Responsive** - Works perfectly on desktop, tablet, and mobile devices
+- Clean and responsive user interface
+- Three User Roles: Admin, Vendor, and User
+- Session-based authentication with hidden password fields
+- Maintenance Module (Admin only)
+- Transaction Module (Vendor adds items, User requests items)
+- Reports Module for order tracking and status updates
+- Role-based access control
 
-## 🎨 Design Highlights
+## Interface
 
-- **Role-Based Color Schemes**
-  - Admin: Purple gradient theme
-  - Vendor: Pink gradient theme
-  - User: Teal/Pink gradient theme
-  
-- **Smooth Animations**
-  - Page load animations
-  - Hover effects
-  - Particle effects on landing page
-  - Status badge animations
-  
-- **Modern Typography**
-  - Google Poppins font
-  - Multiple weight variations
-  - Responsive font sizes
-
-For complete design documentation, see [DESIGN_FEATURES.md](DESIGN_FEATURES.md)
+- Role-based dashboards
+- Simple navigation between modules
+- Basic responsive layout
 
 ## Folder Structure
 
-```
 event_management/
 ├── app.py
 ├── event_management.db (created automatically)
@@ -53,31 +38,24 @@ event_management/
 │   ├── request_item.html
 │   └── user_orders.html
 └── README.md
-```
 
 ## Installation
 
 1. Install Flask:
-```
 pip install flask
-```
 
 2. Run the application:
-```
 python app.py
-```
 
 3. Open browser and go to:
-```
 http://127.0.0.1:5000
-```
 
 ## Default Login Credentials
 
-**Admin:**
-- Username: admin
-- Password: admin123
-- Role: Admin
+Admin:
+Username: admin  
+Password: admin12  
+Role: admin  
 
 ## How to Use
 
@@ -85,33 +63,33 @@ http://127.0.0.1:5000
 1. Login with admin credentials
 2. Maintain Vendor - Add or Update vendors
 3. Maintain User - Add or Update users
-4. Membership Management - Add or Update memberships with duration options
-5. View Order Status Report - See all transactions
+4. Membership Management - Add or Update memberships
+5. View Order Status Report
 
 ### Vendor:
 1. Get login credentials from Admin
 2. Login with vendor role
-3. Add items to the system
-4. View all your items
+3. Add items
+4. View your items
 
 ### User:
 1. Get login credentials from Admin
 2. Login with user role
-3. Request items from available items
+3. Request available items
 4. View your order status
 
 ## Database Tables
 
-- users (id, username, password, role, email, phone, address, created_at)
-- vendors (id, username, password, company_name, email, phone, address, created_at)
-- memberships (id, user_id, duration, start_date, end_date, status)
-- items (id, vendor_id, item_name, description, price, quantity, created_at)
-- transactions (id, user_id, item_id, vendor_id, quantity, total_price, status, request_date)
+- users
+- vendors
+- memberships
+- items
+- transactions
 
 ## Notes
 
-- All fields are mandatory
+- All required fields are validated
 - Radio buttons allow only one selection
-- Passwords are hidden in input fields
-- Session management for secure login
-- Role-based access control
+- Passwords are hidden in login forms
+- Session management is implemented
+- Role-based access is enforced
