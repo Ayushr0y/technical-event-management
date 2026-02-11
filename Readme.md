@@ -24,19 +24,19 @@ event_management/
 ├── app.py
 ├── event_management.db (created automatically)
 ├── templates/
-│   ├── index.html
-│   ├── login.html
-│   ├── admin_dashboard.html
-│   ├── maintain_vendor.html
-│   ├── maintain_user.html
-│   ├── membership.html
-│   ├── admin_reports.html
-│   ├── vendor_dashboard.html
-│   ├── add_item.html
-│   ├── vendor_items.html
-│   ├── user_dashboard.html
-│   ├── request_item.html
-│   └── user_orders.html
+│ ├── index.html
+│ ├── login.html
+│ ├── admin_dashboard.html
+│ ├── maintain_vendor.html
+│ ├── maintain_user.html
+│ ├── membership.html
+│ ├── admin_reports.html
+│ ├── vendor_dashboard.html
+│ ├── add_item.html
+│ ├── vendor_items.html
+│ ├── user_dashboard.html
+│ ├── request_item.html
+│ └── user_orders.html
 └── README.md
 
 ## Installation
